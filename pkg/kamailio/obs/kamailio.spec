@@ -273,6 +273,7 @@ Conflicts:  kamailio-geoip < %ver, kamailio-gzcompress < %ver
 Conflicts:  kamailio-http_client < %ver
 Conflicts:  kamailio-ims < %ver, kamailio-java < %ver, kamailio-json < %ver
 Conflicts:  kamailio-kazoo < %ver
+Conflicts:  kamailio-kafka < %ver
 Conflicts:  kamailio-lcr < %ver, kamailio-ldap < %ver, kamailio-lost < %ver, kamailio-lua < %ver
 Conflicts:  kamailio-nats < %ver
 Conflicts:  kamailio-rabbitmq < %ver
@@ -642,6 +643,18 @@ BuildRequires:  libevent-devel
 %description    kazoo
 Kazoo module for Kamailio.
 %endif
+
+
+
+%package    kafka
+Summary:    Kafka middle layer connector support for Kamailio
+Group:      %{PKGGROUP}
+Requires:   librdkafka1
+BuildRequires:  librdkafka-dev
+
+%description    kafka
+Kafka module for Kamailio.
+
 
 
 %package    lcr
@@ -2032,6 +2045,13 @@ fi
 %doc %{_docdir}/kamailio/modules/README.kazoo
 %{_libdir}/kamailio/modules/kazoo.so
 %endif
+
+
+%files      kafka
+%defattr(-,root,root)
+%doc %{_docdir}/kamailio/modules/README.kafka
+%{_libdir}/kamailio/modules/kafka.so
+
 
 %files      lcr
 %defattr(-,root,root)
