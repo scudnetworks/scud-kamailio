@@ -623,7 +623,7 @@ deb-stable:
 		dpkg-buildpackage -rfakeroot -tc -uc -us; \
 		rm debian; \
 	else \
-		ln -s pkg/$(MAIN_NAME)/deb/bullseye debian; \
+		ln -s pkg/$(MAIN_NAME)/deb/bookworm debian; \
 		dpkg-buildpackage -rfakeroot -tc -uc -us; \
 		rm debian; \
 	fi)
