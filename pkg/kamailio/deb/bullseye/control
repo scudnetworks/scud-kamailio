@@ -57,6 +57,7 @@ Build-Depends:
  ruby-dev,
  unixodbc-dev,
  uuid-dev,
+ librdkafka1,
  xsltproc,
  zlib1g-dev,
 Standards-Version: 4.6.0.1
