@@ -11,7 +11,7 @@
 # - basic used modules, with no extra dependency (widespread usage)
 mod_list_basic=async auth benchmark blst cfg_rpc cfgutils corex counters \
 				   ctl debugger diversion enum exec ipops kex mangler maxfwd \
-				   mediaproxy mqueue \
+				   mediaproxy mqueue kafka \
 				   nat_traversal nathelper path pike pv ratelimit rr rtimer \
 				   rtpproxy sanity sdpops siputils sl statistics textops \
 				   textopsx tm tmx topoh xlog rtpengine stun sipt tcpops \
